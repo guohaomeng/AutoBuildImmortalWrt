@@ -42,6 +42,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Add wifi-driver to OpenWrt
+        run: |
+          mkdir -p ${{ github.workspace }}/package/kernel/uwe5622-wifi
+          cp -r ${{ github.workspace }}/uwe5622_driver/* ${{ github.workspace }}/package/kernel/uwe5622-wifi
+
       - name: Set executable permissions
         run: |
           chmod +x ${{ github.workspace }}/sunxi-cortexa53/build.sh
