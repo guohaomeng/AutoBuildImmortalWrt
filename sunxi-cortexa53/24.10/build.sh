@@ -30,6 +30,8 @@ PACKAGES="$PACKAGES fdisk"
 PACKAGES="$PACKAGES script-utils"
 PACKAGES="$PACKAGES luci-i18n-samba4-zh-cn"
 
+# 添加zero3板载wifi支持
+PACKAGES="$PACKAGES kmod-uwe5622-wifi"
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
